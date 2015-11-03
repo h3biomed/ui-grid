@@ -109,7 +109,8 @@
           }
 
           // If we haven't built columns before and either have some columns defined or some data defined
-          if (!hasColumns && (self.grid.options.columnDefs.length > 0 || newData.length > 0)) {
+          //if (!hasColumns && (self.grid.options.columnDefs.length > 0 || newData.length > 0)) { // LEBL: Removed to allow pinned selection columns to show
+          if (self.grid.options.columnDefs.length > 0 || newData.length > 0) {
             // Build the column set, then pre-compile the column cell templates
             promises.push(self.grid.buildColumns()
               .then(function() {
