@@ -252,12 +252,12 @@
                         row.setSelected(true);
                         service.decideRaiseSelectionEvent( grid, row, changedRows, evt );
                       }
-                    } else {
+                    } /*else { // LEBL: Do not unselect previously selected rows
                       if (row.isSelected){
                         row.setSelected(false);
                         service.decideRaiseSelectionEvent( grid, row, changedRows, evt );
                       }
-                    }
+                    }*/
                   });
                   service.decideRaiseSelectionBatchEvent( grid, changedRows, evt );
                   grid.selection.selectAll = true;
